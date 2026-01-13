@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Auth</title>
+    <link rel="stylesheet" href="./css/auth.css">
+
+</head>
+
+<body>
+
+    <% if (user) { %>
+        <div class="auth-card center">
+            <h1>Hi, <%= user %> 👋</h1>
+            <p class="welcome-text">You are successfully logged in.</p>
+
+            <form action="/logout?_method=DELETE" method="post">
+                <button class="btn-danger" type="submit">Logout</button>
+            </form>
+        </div>
+        <% } %>
+
+</body>
+
+</html>
